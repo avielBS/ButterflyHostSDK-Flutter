@@ -54,7 +54,7 @@ public class ButterflySdkPlugin implements FlutterPlugin, MethodCallHandler {
 
 
     private void startButterflySDK(Activity activity, String key) {
-        ButterflyHost butterflyHost = new ButterflyHost();
+        ButterflyHost butterflyHost = ButterflyHost.getInstance();
         butterflyHost.OnGrabReportRequested(activity, key);
     }
 
