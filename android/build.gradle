@@ -1,0 +1,35 @@
+group 'sdk.butterfly_sdk'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+}
+dependencies {
+    //**********android host sdk ***********
+    implementation 'com.github.avielBS:TheButterflyHostAndroid:0.1.4'
+}

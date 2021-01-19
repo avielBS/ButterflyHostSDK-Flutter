@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="sdk.butterfly_sdk">
+    
+    <application>
+        <provider
+            android:name="sdk.butterfly_sdk.ContextProvider"
+            android:authorities="sdk.butterfly_sdk.ContextProvider" />
+    </application>
+</manifest>
