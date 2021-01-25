@@ -13,7 +13,9 @@ public class SwiftButterflySdkPlugin: NSObject, FlutterPlugin {
     if(call.method.elementsEqual("butterfly_sdk")){
         let arguments = call.arguments as? NSDictionary
         let key = arguments!["key"] as? String
-        let vc = UIApplication.shared.delegate!.window!!.rootViewController!
+        guard let window = UIApplication.shared.keyWindow, let vc = window.rootViewController else {
+            return
+        }
         ButterflyHostController.getInstance().onGrabReportRequeste(vc, andKey:key)
     }
   }
