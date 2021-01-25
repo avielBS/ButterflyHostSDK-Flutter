@@ -16,6 +16,5 @@ public class SwiftButterflySdkPlugin: NSObject, FlutterPlugin {
         let vc = UIApplication.shared.delegate!.window!!.rootViewController!
         ButterflyHostController.getInstance().onGrabReportRequeste(vc, andKey:key)
     }
-    result("iOS " + UIDevice.current.systemVersion)
   }
 }
