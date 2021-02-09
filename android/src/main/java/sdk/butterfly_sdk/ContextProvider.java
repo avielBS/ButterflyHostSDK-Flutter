@@ -17,14 +17,14 @@ import java.lang.ref.WeakReference;
 
 public class ContextProvider extends ContentProvider implements Application.ActivityLifecycleCallbacks {
 
-    private static Activity topActivity;
+    private static WeakReference<Activity> topActivity;
 
     public ContextProvider(){
 
     }
 
     public Activity getActivity(){
-        return topActivity;
+        return topActivity.get();
     }
 
 
@@ -33,21 +33,18 @@ public class ContextProvider extends ContentProvider implements Application.Acti
         Context applicationContext = getContext().getApplicationContext();
         if (applicationContext instanceof Application) {
             ((Application)applicationContext).registerActivityLifecycleCallbacks(this);
-            Log.e(this.getClass().getSimpleName(),"registerActivityLifecycleCallbackss");
         }
-        Log.e(this.getClass().getSimpleName(),"in onCreate function");
         return false;
     }
 
     @Override
     public void onActivityStarted(@NonNull Activity activity) {
-        topActivity = activity;
-        Log.e("topActivity",topActivity.getClass().getName());
+
     }
 
     @Override
     public void onActivityResumed(@NonNull Activity activity) {
-
+        topActivity = new WeakReference(activity);
     }
 
     @Override
@@ -57,7 +54,7 @@ public class ContextProvider extends ContentProvider implements Application.Acti
 
     @Override
     public void onActivityStopped(@NonNull Activity activity) {
-
+        topActivity = null;
     }
 
     @Override

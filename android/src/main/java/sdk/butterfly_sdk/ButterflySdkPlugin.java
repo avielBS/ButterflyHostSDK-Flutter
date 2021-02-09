@@ -22,8 +22,6 @@ public class ButterflySdkPlugin implements FlutterPlugin, MethodCallHandler {
     /// This local reference serves to register the plugin with the Flutter Engine and unregister it
     /// when the Flutter Engine is detached from the Activity
     private MethodChannel channel;
-    private Activity activity;
-    private ContextProvider contextProvider;
 
 
 
@@ -40,8 +38,9 @@ public class ButterflySdkPlugin implements FlutterPlugin, MethodCallHandler {
         } else if (call.method.equals("butterflySDK")) {
             Log.d("butterflySDK", "in butterflySDK function");
             String key = call.argument("key");
-            this.activity = new ContextProvider().getActivity();
-            startButterflySDK(this.activity, key);
+            Activity activity = new ContextProvider().getActivity();
+            if(activity != null)
+                startButterflySDK(activity, key);
         } else {
                result.notImplemented();
         }
