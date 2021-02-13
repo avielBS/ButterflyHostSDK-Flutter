@@ -16,7 +16,7 @@ public class SwiftButterflySdkPlugin: NSObject, FlutterPlugin {
         guard let window = UIApplication.shared.keyWindow, let vc = window.rootViewController else {
             return
         }
-        ButterflyHostController.getInstance().onGrabReportRequeste(vc, andKey:key)
+        ButterflyHostController.getInstance().onGrabReportRequested(vc, andKey:key)
     }
   }
 }
