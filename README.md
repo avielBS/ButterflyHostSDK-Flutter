@@ -1,15 +1,31 @@
-# butterfly_host_sdk
-
 TheButterflyHost help you app to take part in the fight against domestic violent.
 
-## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Installationa
+### 🔌 & ▶️
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Our plugin](https://pub.dev/packages/butterfly_host_sdk) is pretty straight forward and easy to install, all you need to do is add `butterfly_host_sdk` dependency .
+To recognize your app in ButterflyHostSDK servers you need an application key, you can set it via code.
 
+Required changes in your `pubspec.yaml` file:
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+...
+  butterfly_host_sdk: 0.0.1
+...
+```
+
+## Example
+
+```
+import 'package:butterfly_sdk/butterfly_host_sdk.dart';
+  
+  await ButterflyHostSDK.butterflySDK("YOUR_API_KEY");
+
+```
+
+## Comments
+
+* This SDK using a method channel for better performances.
