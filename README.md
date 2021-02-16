@@ -1,6 +1,6 @@
-# butterfly_sdk
+# butterfly_host_sdk
 
-A new Flutter plugin.
+TheButterflyHost help you app to take part in the fight against domestic violent.
 
 ## Getting Started
 
