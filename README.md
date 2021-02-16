@@ -1,6 +1,3 @@
-# TheButterflyHost Flutter SDK
-
-
 TheButterflyHost help you app to take part in the fight against domestic violent.
 
 
