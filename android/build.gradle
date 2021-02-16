@@ -31,5 +31,5 @@ android {
 }
 dependencies {
     //**********android host sdk ***********
-    implementation 'com.github.avielBS:TheButterflyHostAndroid:0.1.5'
+    implementation 'com.github.avielBS:TheButterflyHostAndroid:0.1.7'
 }
