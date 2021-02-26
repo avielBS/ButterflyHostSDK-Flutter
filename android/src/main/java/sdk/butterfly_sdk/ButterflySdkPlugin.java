@@ -35,8 +35,8 @@ public class ButterflySdkPlugin implements FlutterPlugin, MethodCallHandler {
     public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
         if (call.method.equals("getPlatformVersion")) {
             result.success("Android " + android.os.Build.VERSION.RELEASE);
-        } else if (call.method.equals("butterflySDK")) {
-            Log.d("butterflySDK", "in butterflySDK function");
+        } else if (call.method.equals("butterflyHostSDK")) {
+            Log.d("butterflyHostSDK", "in butterflyHostSDK function");
             String key = call.argument("key");
             Activity activity = new ContextProvider().getActivity();
             if(activity != null)

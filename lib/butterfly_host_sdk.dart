@@ -3,7 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 
-class ButterflySdk {
+class  ButterflyHostSDK{
   static const MethodChannel _channel =
       const MethodChannel('butterfly_sdk');
 
@@ -12,9 +12,8 @@ class ButterflySdk {
     return version;
   }
 
-  static Future<bool> butterflySDK(String key) async {
-    final bool result = await _channel.invokeMethod('butterflySDK',{"key":key});
-    return result;
+  static void butterflyHost(String key) async {
+     _channel.invokeMethod('butterflyHostSDK',{"key":key});
   }
 
 }

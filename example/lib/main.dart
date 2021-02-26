@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
 
   void butterflySDK() async{
-    await ButterflyHostSDK.butterflySDK("key1");
+     ButterflyHostSDK.butterflyHost("key1");
   }
 
   @override
