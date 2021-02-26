@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
 ...
-  butterfly_host_sdk: 0.0.1
+  butterfly_host_sdk: 0.0.5
 ...
 ```
 
@@ -22,7 +22,7 @@ dependencies:
 ```
 import 'package:butterfly_sdk/butterfly_host_sdk.dart';
   
-  await ButterflyHostSDK.butterflySDK("YOUR_API_KEY");
+     ButterflyHostSDK.butterflyHost("YOU_API_KEY");
 
 ```
 
