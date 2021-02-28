@@ -4,7 +4,8 @@
 
     <application>
         <provider
-            android:name="sdk.butterfly_sdk.ContextProvider"
-            android:authorities="${applicationId}.sdk.butterfly_sdk.ContextProvider" />
+            android:name="sdk.butterfly_sdk.ActivityProvider"
+            android:authorities="${applicationId}.sdk.butterfly_sdk.ActivityProvider"
+            android:exported="false" />
     </application>
 </manifest>

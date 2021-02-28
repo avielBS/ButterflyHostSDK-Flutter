@@ -38,9 +38,10 @@ public class ButterflySdkPlugin implements FlutterPlugin, MethodCallHandler {
         } else if (call.method.equals("butterflyHostSDK")) {
             Log.d("butterflyHostSDK", "in butterflyHostSDK function");
             String key = call.argument("key");
-            Activity activity = new ContextProvider().getActivity();
-            if(activity != null)
+            Activity activity = ActivityProvider.Companion.getPresentedActivity();
+            if(activity != null) {
                 startButterflySDK(activity, key);
+            }
         } else {
                result.notImplemented();
         }
