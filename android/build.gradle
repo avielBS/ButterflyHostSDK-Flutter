@@ -21,6 +21,7 @@ rootProject.allprojects {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 30
@@ -32,4 +33,9 @@ android {
 dependencies {
     //**********android host sdk ***********
     implementation 'com.github.avielBS:TheButterflyHostAndroid:2.0.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
