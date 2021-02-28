@@ -1,7 +1,7 @@
 TheButterflyHost help you app to take part in the fight against domestic violent.
 
 
-## Installations
+## Installation
 ### 🔌 & ▶️
 
 [Our plugin](https://pub.dev/packages/butterfly_host_sdk) is pretty straight forward and easy to install, all you need to do is add `butterfly_host_sdk` dependency .
