@@ -22,9 +22,20 @@ Becuse the SDK uses Jitpack.io:
 * in your `flutter_app/Android/app/build.gradle` set your `minSdkVersion 21`
 * in your `flutter_app/Android/build.gradle` add :
 ```
+buildscript {
+    ext.kotlin_version = '1.4.31'
+    repositories {
+       ....
+    }
+
+    dependencies {
+     ...
+     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 allprojects {
     repositories {
-        maven { url 'https://jitpack.io' }
+        maven { url 'https://jitpack.io' } // first
         google()
         jcenter()
     }
