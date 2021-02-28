@@ -1,7 +1,7 @@
 TheButterflyHost help you app to take part in the fight against domestic violent.
 
 
-## Installations
+## Installation
 ### 🔌 & ▶️
 
 [Our plugin](https://pub.dev/packages/butterfly_host_sdk) is pretty straight forward and easy to install, all you need to do is add `butterfly_host_sdk` dependency .
@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
 ...
-  butterfly_host_sdk: 0.0.5
+  butterfly_host_sdk: 0.0.9
 ...
 ```
 
@@ -22,9 +22,20 @@ Becuse the SDK uses Jitpack.io:
 * in your `flutter_app/Android/app/build.gradle` set your `minSdkVersion 21`
 * in your `flutter_app/Android/build.gradle` add :
 ```
+buildscript {
+    ext.kotlin_version = '1.4.31'
+    repositories {
+       ....
+    }
+
+    dependencies {
+     ...
+     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 allprojects {
     repositories {
-        maven { url 'https://jitpack.io' }
+        maven { url 'https://jitpack.io' } // first
         google()
         jcenter()
     }
