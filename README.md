@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
 ...
-  butterfly_host_sdk: 0.0.9
+  butterfly_host_sdk: 0.1.0
 ...
 ```
 
